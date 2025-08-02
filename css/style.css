@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --clr-primary: #3f72af;
+  --clr-secondary: #f9f7f7;
+  --clr-accent: #dbe2ef;
+  --clr-text: #112d4e;
+  --clr-card-bg: #ffffff;
+  --shadow: 0 4px 12px rgba(0,0,0,.08);
+  --radius: 12px;
+  --transition: .3s ease;
+}
+
+[data-theme="dark"] {
+  --clr-primary: #5e60ce;
+  --clr-secondary: #212529;
+  --clr-accent: #4ea8de;
+  --clr-text: #f1f3f5;
+  --clr-card-bg: #343a40;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--clr-secondary);
+  color: var(--clr-text);
+  transition: background var(--transition), color var(--transition);
+}
+
+a { color: var(--clr-primary); text-decoration: none; }
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: var(--clr-accent);
+}
+.hero h1 { font-size: 2.5rem; margin: 0 0 .5rem; }
+.cta {
+  margin-top: 1rem;
+  padding: .8rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--clr-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cta:hover { opacity: .9; }
+
+.section-pad { padding: 3rem 1rem; }
+.bg-alt { background: var(--clr-accent); }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--clr-card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+.card:hover { transform: translateY(-4px); }
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card-body { padding: 1rem; }
+
+.btn-secondary {
+  padding: .6rem 1.4rem;
+  border: 2px solid var(--clr-primary);
+  border-radius: var(--radius);
+  color: var(--clr-primary);
+  font-weight: 600;
+  display: inline-block;
+  transition: var(--transition);
+}
+.btn-secondary:hover { background: var(--clr-primary); color: #fff; }
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: .6rem 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--clr-accent);
+  border-radius: var(--radius);
+}
+
+.review-grid blockquote {
+  background: var(--clr-card-bg);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: .5rem;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+/* Tambahkan di style.css */
+.btn-transition {
+  transition: transform .2s ease;
+}
+.btn-transition:active {
+  transform: scale(.92);
+}

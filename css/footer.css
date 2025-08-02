@@ -1,0 +1,12 @@
+footer {
+  background: var(--clr-text);
+  color: var(--clr-secondary);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: .9rem;
+}
+footer a { color: var(--clr-accent); }
+
+@view-transition {
+  navigation: auto;
+}

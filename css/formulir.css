@@ -1,0 +1,20 @@
+.form-group { margin-bottom: 1rem; }
+label { display: block; margin-bottom: .3rem; font-weight: 500; }
+input, select, textarea {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid var(--clr-accent);
+  border-radius: var(--radius);
+}
+button[type="submit"] {
+  background: var(--clr-primary);
+  color: #fff;
+  border: none;
+  padding: .7rem 1.4rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+@view-transition {
+  navigation: auto;
+}
